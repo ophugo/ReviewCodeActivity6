@@ -8,7 +8,7 @@
 
 import Foundation
 
-var phrase: [String] = ["a","b","c","d","e","h"]
+var phrase: [String] = ["a","b","c","d","e","f"]
 
 class phraseCon {
     var arr: [String]
@@ -17,7 +17,7 @@ class phraseCon {
         arr = phr
     }
     
-    func Concatenate(phr: [String]) -> String {
+    func concatenateList(phr: [String]) -> String {
         var temp: String = ""
         for chars in phr {
             temp += chars
@@ -31,5 +31,5 @@ class phraseCon {
 
 let hug = phraseCon(phr: phrase)
 
-print("\(hug.Concatenate(phr: hug.arr))")
+print("\(hug.concatenateList(phr: hug.arr))")
 
