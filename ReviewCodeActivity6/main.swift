@@ -8,28 +8,30 @@
 
 import Foundation
 
-var phrase: [String] = ["a","b","c","d","e","f"]
+var phraseOne: [String] = ["a","b","c","d","e","f"]
 
 class phraseCon {
+    //arreglo donde se guardara el string inicialisado con la clase
     var arr: [String]
     
-    init(phr: [String]){
-        arr = phr
+    init(phrase: [String]){
+        arr = phrase
     }
-    
-    func concatenateList(phr: [String]) -> String {
+    //funcion que regresa el string concatenado
+    func concatenateList(phrase: [String]) -> String {
         var temp: String = ""
-        for chars in phr {
+        for chars in phrase {
             temp += chars
             temp += ","
         }
+        //en esta parte elimino la ultima coma del string, se usa la funcion substring
         var truncated = temp.substring(to: temp.index(before: temp.endIndex))
         return truncated
     }
     
 }
 
-let hug = phraseCon(phr: phrase)
+let phrase1 = phraseCon(phrase: phraseOne)
 
-print("\(hug.concatenateList(phr: hug.arr))")
+print(phrase1.concatenateList(phrase: phrase1.arr))
 
