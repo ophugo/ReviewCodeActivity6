@@ -8,5 +8,28 @@
 
 import Foundation
 
-print("Hello, World!")
+var phrase: [String] = ["a","b","c","d","e","h"]
+
+class phraseCon {
+    var arr: [String]
+    
+    init(phr: [String]){
+        arr = phr
+    }
+    
+    func Concatenate(phr: [String]) -> String {
+        var temp: String = ""
+        for chars in phr {
+            temp += chars
+            temp += ","
+        }
+        var truncated = temp.substring(to: temp.index(before: temp.endIndex))
+        return truncated
+    }
+    
+}
+
+let hug = phraseCon(phr: phrase)
+
+print("\(hug.Concatenate(phr: hug.arr))")
 
